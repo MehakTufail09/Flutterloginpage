@@ -1,0 +1,170 @@
+// ignore_for_file: prefer_const_constructors, sort_child_properties_last
+
+// import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+// import 'package:flutter/painting.dart';
+// import 'package:flutter/widgets.dart';
+
+class LoginPage extends StatelessWidget {
+  const LoginPage({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Color.fromARGB(255, 102, 115, 202),
+      body: Column(
+        children: [
+          SizedBox(
+            height: 70,
+            width: 50,
+          ),
+          Text(
+            "Hello! Welcome back",
+            style: TextStyle(color: Colors.white, fontSize: 22),
+          ),
+          Text(
+            "Login",
+            style: TextStyle(
+                color: Colors.white, fontSize: 18, fontWeight: FontWeight.bold),
+          ),
+          SizedBox(
+            height: 32,
+            width: 50,
+          ),
+          TextField(
+            decoration: InputDecoration(
+                hintText: "Username",
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(12),
+                  ),
+                ),
+                filled: true,
+                fillColor: Color.fromARGB(255, 193, 200, 244).withOpacity(0.9)),
+          ),
+          SizedBox(
+            height: 10,
+            width: 50,
+          ),
+          TextField(
+            decoration: InputDecoration(
+                hintText: "Password",
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(12),
+                  ),
+                ),
+                filled: true,
+                fillColor: Color.fromARGB(255, 193, 200, 244).withOpacity(0.9)),
+          ),
+          Align(
+            alignment: Alignment.centerRight,
+            child: TextButton(
+              onPressed: () {},
+              child: Text("Forget Password"),
+              style: TextButton.styleFrom(
+                foregroundColor: Colors.white,
+              ),
+            ),
+          ),
+          SizedBox(
+            width: 230,
+            child: ElevatedButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.deepPurple,
+                foregroundColor: Colors.white,
+              ),
+              child: Text("LogIn"),
+            ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Text(
+            "Or Sign in with",
+            style: TextStyle(height: 3),
+          ),
+          SizedBox(
+            width: 230,
+            child: ElevatedButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color.fromARGB(255, 245, 245, 247),
+                foregroundColor: const Color.fromARGB(255, 28, 27, 27),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(45),
+                  ),
+                ),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    "assets/images/google.png",
+                    width: 22,
+                    height: 22,
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text("Log in with google"),
+                ],
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 5,
+          ),
+          SizedBox(
+            width: 230,
+            child: ElevatedButton(
+              onPressed: () {},
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.white,
+                foregroundColor: Colors.black,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(45),
+                  ),
+                ),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset(
+                    "assets/images/fb.png",
+                    width: 22,
+                    height: 22,
+                  ),
+                  SizedBox(
+                    width: 8,
+                  ),
+                  Text("Log in with Facebook"),
+                ],
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          Row(
+            children: [
+              Text(
+                "Don't have an account?",
+                style: TextStyle(
+                  color: Colors.white,
+                ),
+              ),
+              TextButton(
+                  onPressed: () {},
+                  style: TextButton.styleFrom(
+                      foregroundColor: Color.fromARGB(255, 253, 253, 253)),
+                  child: Text("Sign Up"))
+            ],
+          )
+        ],
+      ),
+    );
+  }
+}
